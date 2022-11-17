@@ -122,22 +122,21 @@ header{
   text-align: center;
   width: 100px;
   font-size: 18px;
+  color: #E1E1E6;
 }
 
 .card ul li .sele1{
   display: inline-block;
   width: 118px;
   text-align: center;
+  color: #E1E1E6;
 }
 
 .card ul li .sele2{
   display: inline-block;
   width: 118px;
   text-align: center;
-}
-
-.card ul li .nome1 .nome2 .p{
-  color: white;
+  color: #E1E1E6;
 }
 
 ul li img{
