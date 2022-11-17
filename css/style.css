@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --card-title-border-color: #746615;
+  --card-color-primary: #f7dd43;
+  --card-bg-color: #1d1c19;
+  --bg: url(../assets/bg-yellow.svg);
+}
+
+body.blue{
+  --card-title-border-color: #024392;
+  --card-color-primary: #338af3;
+  --card-bg-color: #202024;
+  --bg: url(../assets/bg-blue.svg);
+}
+
+body.green{
+  --card-title-border-color: #407c3a;
+  --card-color-primary: #05ad59;
+  --card-bg-color: #1a1f1b;
+  --bg: url(../assets/bg-green.svg);
+}
+
+ul{
+  list-style: none;
+}
+
+body{
+  background-color: #121214;
+  background-image: var(--bg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body *{
+  font-family: "Roboto", sans-serif;
+}
+
+#app {
+  width: fit-content;
+  margin:auto;
+  padding-top: 52px;
+}
+
+header{
+  margin-top: 35px;
+  margin-bottom: 53px;
+  text-align: center;
+}
+
+#cards{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.card{
+  padding: 32px 0;
+  text-align: center;
+  background: var(--card-bg-color);
+  border-bottom: 2px solid var(--card-color-primary);
+  border-radius: 6px;
+}
+
+.card h2{
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  border: 1px solid var(--card-title-border-color);
+  border-radius: 6px;
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: 53px;
+  color: #f7dd43;
+}
+
+.card h2 span{
+  color: #e1e1e6;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.card ul{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card ul li{
+  display: block;
+  align-items: center;
+  
+  padding-top: 14px;
+  width: 370px;
+}
+
+.card ul li + li + li{
+  border-top: 1px solid rgba(211, 211, 211, 0.175);
+}
+
+.card ul li + li{
+  border-top: 1px solid rgba(211, 211, 211, 0.175);
+}
+
+.card ul li strong{
+  display: inline-block;
+  font-weight: 900;
+  font-size: 36px;
+  padding-bottom: 10px;
+  color: #E1E1E6;
+  text-align: center;
+}
+
+.card ul li .placar{
+  display: inline-block;
+  text-align: center;
+  width: 100px;
+  font-size: 18px;
+}
+
+.card ul li .sele1{
+  display: inline-block;
+  width: 118px;
+  text-align: center;
+}
+
+.card ul li .sele2{
+  display: inline-block;
+  width: 118px;
+  text-align: center;
+}
+
+ul li img{
+  width: 3rem;
+  padding-bottom: 5px;
+}
+
+ul li img:hover{
+  transform: scale(1.4);
+  transition: transform 0.2s;
+}
+
+.placar p:hover{
+  transform: scale(1.6);
+  transition: transform 0.2s;
+}
+
+.card h2:hover{
+  transform: scale(1.2);
+  transition: transform 0.2s;
+}
+
+.card{
+  opacity: 0;
+  animation: appear .2s forwards;
+}
+
+@keyframes appear{
+  0%{
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@media (min-width: 700px){
+  #cards {
+    flex-direction: row;
+    max-width: 1200px;
+    flex-wrap: wrap;
+  }
+}
