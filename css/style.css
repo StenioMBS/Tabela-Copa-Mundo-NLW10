@@ -136,6 +136,10 @@ header{
   text-align: center;
 }
 
+.card ul li .nome1 .nome2 .p{
+  color: white;
+}
+
 ul li img{
   width: 3rem;
   padding-bottom: 5px;
